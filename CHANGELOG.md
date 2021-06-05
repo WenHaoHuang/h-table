@@ -1,3 +1,21 @@
+### [0.0.2](https://github.com/WenHaoHuang/h-table/compare/v0.0.1...v0.0.2)
+
+_2021-06-05_
+
+#### 修复
+
+##### 组件
+- 修复组件错误引用([989dd06](https://github.com/WenHaoHuang/h-table/commit/989dd06))
+
+
+
+#### 优化
+
+##### 组件
+- 分页增加默认配置([3191303](https://github.com/WenHaoHuang/h-table/commit/3191303))
+
+
+
 ### [0.0.1](https://github.com/WenHaoHuang/h-table/compare/12bc131...v0.0.1)
 
 _2021-06-05_
