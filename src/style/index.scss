@@ -1,0 +1,33 @@
+@import 'mixins/mixins';
+@import 'common/var';
+
+@include b(table) {
+  @include e(table) {
+    .text-primary {
+      color:#1b85ff;
+      @include when(btn) {
+        cursor: pointer;
+      }
+    }
+  }
+  @include e(operation) {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    .el-button + .el-dropdown {
+      margin-left: 10px;
+    }
+    .el-dropdown + .el-dropdown {
+      margin-left: 10px;
+    }
+  }
+  // 单选处理
+  @include e(radio) {
+    >.el-radio__label {
+      display: none;
+    }
+  }
+  &__table + &__pagination {
+    margin-top: 18px;
+  }
+}
