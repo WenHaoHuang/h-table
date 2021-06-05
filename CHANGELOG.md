@@ -1,3 +1,14 @@
+### [0.0.4](https://github.com/WenHaoHuang/h-table/compare/v0.0.3...v0.0.4)
+
+_2021-06-05_
+
+#### 优化
+
+##### 组件
+- 分页组件样式优化([0cd2e66](https://github.com/WenHaoHuang/h-table/commit/0cd2e66))
+
+
+
 ### [0.0.3](https://github.com/WenHaoHuang/h-table/compare/v0.0.2...v0.0.3)
 
 _2021-06-05_
