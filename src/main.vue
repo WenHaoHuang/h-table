@@ -38,7 +38,9 @@
       @prev-click="prevClick"
       @next-click="nextClick"
       @current-change="pageChange"
-    />
+    >
+      当前 {{ pageStart }} 到 {{ pageEnd }} 条
+    </el-pagination>
   </div>
 </template>
 
@@ -52,7 +54,7 @@ export default {
   props: {
     data: {
       type: Array,
-      default: () => []
+      default: () => [],
     },
     pagination: {
       // 分页栏配置
@@ -61,8 +63,8 @@ export default {
         total: 0,
         currentPage: 1,
         pageSize: 15,
-        layout: 'limit, total, ->, prev, pager, next',
-        hideOnSinglePage: true
+        layout: 'slot, total, ->, prev, pager, next',
+        hideOnSinglePage: true,
       }),
     },
     // 表格行配置
@@ -100,10 +102,18 @@ export default {
     showOperation() {
       return this.operation && this.operation.commands && this.operation.commands.length
     },
+    pageStart() {
+      const { currentPage, pageSize } = this.pagination
+      return pageSize * (currentPage - 1) + 1
+    },
+    pageEnd() {
+      const { currentPage, pageSize, total } = this.pagination
+      return Math.min(total, pageSize * currentPage)
+    },
   },
   watch: {
     selectedRowKeys: {
-      handler: function(val) {
+      handler: function (val) {
         this.defaultKeys = val
         this.$nextTick(() => {
           this.handlerSelection()
@@ -113,7 +123,7 @@ export default {
       immediate: true,
     },
     data: {
-      handler: function() {
+      handler: function () {
         this.$nextTick(() => {
           this.handlerSelection()
         })
@@ -185,7 +195,7 @@ export default {
       const { selectedRowKeys, $attrs, data } = this
       const { 'row-key': rowKey } = $attrs
       if (rowKey && selectedRowKeys && selectedRowKeys.length && data && data.length) {
-        data.forEach(item => {
+        data.forEach((item) => {
           if (selectedRowKeys.includes(item[rowKey])) {
             this.$refs.table.toggleRowSelection(item, true)
           }

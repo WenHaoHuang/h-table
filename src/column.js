@@ -76,7 +76,7 @@ export default {
             if (children) {
               // 有children当做操作组处理
               // 是否显示
-              const visible = visibleFunc && visibleFunc(scope.row);
+              const visible = !visibleFunc || (visibleFunc && visibleFunc(scope.row));
               // 所有子类是否都显示
               const visibleItems = children.filter(
                 v => !v.visibleFunc || v.visibleFunc(scope.row)
