@@ -136,7 +136,7 @@ export default {
           });
 
           return buttons.length ? (
-            <div class="sd-table__operation">{buttons}</div>
+            <div class="h-table__operation">{buttons}</div>
           ) : null;
         }
       };

@@ -1,8 +1,8 @@
 <template>
-  <div class="sd-table">
+  <div class="h-table">
     <el-table
       ref="table"
-      class="sd-table__table"
+      class="h-table__table"
       :data="data"
       v-bind="$attrs"
       v-on="tableEvents"
@@ -31,8 +31,8 @@
         @visible-change="visibleChange"
       />
     </el-table>
-    <sn-pagination
-      class="sd-table__pagination"
+    <el-pagination
+      class="h-table__pagination"
       v-bind="pagination"
       @size-change="sizeChange"
       @prev-click="prevClick"

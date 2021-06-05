@@ -34,7 +34,7 @@ export default {
         }
         return (
           <sn-radio
-            class="sd-table__radio"
+            class="h-table__radio"
             value={selected}
             label={true}
             disabled={disabled}
