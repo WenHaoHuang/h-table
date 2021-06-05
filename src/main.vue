@@ -60,6 +60,8 @@ export default {
       default: () => ({
         total: 0,
         currentPage: 1,
+        pageSize: 15,
+        layout: 'limit, total, ->, prev, pager, next',
         hideOnSinglePage: true
       }),
     },
