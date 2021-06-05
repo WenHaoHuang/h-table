@@ -1,10 +1,10 @@
-@import 'mixins/mixins';
-@import 'common/var';
+@import "mixins/mixins";
+@import "common/var";
 
 @include b(table) {
   @include e(table) {
     .text-primary {
-      color:#1b85ff;
+      color: #1b85ff;
       @include when(btn) {
         cursor: pointer;
       }
@@ -23,11 +23,31 @@
   }
   // 单选处理
   @include e(radio) {
-    >.el-radio__label {
+    > .el-radio__label {
       display: none;
     }
   }
   &__table + &__pagination {
     margin-top: 18px;
+  }
+  &__table {
+    thead {
+      color: #666;
+      font-weight: 500;
+      th {
+        background-color: #f5f7fa;
+      }
+    }
+  }
+  &__pagination.is-background {
+    padding: 2px 0;
+    .btn-next {
+      margin-right: 0;
+    }
+  }
+  .el-pagination__slot {
+    margin-right: 10px;
+    font-weight: 400;
+    color: #606266;
   }
 }

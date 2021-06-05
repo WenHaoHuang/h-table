@@ -4,6 +4,7 @@
       ref="table"
       class="h-table__table"
       :data="data"
+      border
       v-bind="$attrs"
       v-on="tableEvents"
     >
@@ -39,7 +40,9 @@
       @next-click="nextClick"
       @current-change="pageChange"
     >
-      当前 {{ pageStart }} 到 {{ pageEnd }} 条
+      <span class="el-pagination__slot">
+        当前 {{ pageStart }} 到 {{ pageEnd }} 条
+      </span>
     </el-pagination>
   </div>
 </template>
