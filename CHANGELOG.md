@@ -1,3 +1,14 @@
+### [0.0.5](https://github.com/WenHaoHuang/h-table/compare/v0.0.4...v0.0.5)
+
+_2021-06-06_
+
+#### 优化
+
+##### 组件
+- 优化表单内的按钮上下边距([8e72174](https://github.com/WenHaoHuang/h-table/commit/8e72174))
+
+
+
 ### [0.0.4](https://github.com/WenHaoHuang/h-table/compare/v0.0.3...v0.0.4)
 
 _2021-06-05_
