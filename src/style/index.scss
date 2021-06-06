@@ -38,6 +38,13 @@
         background-color: #f5f7fa;
       }
     }
+    .el-button--small, .el-button--small.is-round {
+      padding-top: 5px;
+      padding-bottom: 5px;
+    }
+    .el-table-column--selection .cell {
+      padding-right: 10px;
+    }
   }
   &__pagination.is-background {
     padding: 2px 0;
