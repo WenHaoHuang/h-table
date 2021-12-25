@@ -106,8 +106,8 @@ export default {
       return this.operation && this.operation.commands && this.operation.commands.length
     },
     pageStart() {
-      const { currentPage, pageSize } = this.pagination
-      return pageSize * (currentPage - 1) + 1
+      const { currentPage, pageSize, total } = this.pagination
+      return Math.min(total, pageSize * (currentPage - 1) + 1)
     },
     pageEnd() {
       const { currentPage, pageSize, total } = this.pagination
